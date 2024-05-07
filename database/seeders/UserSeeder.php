@@ -17,6 +17,13 @@ class UserSeeder extends Seeder
     /**
      * Run the database seeds.
      */
+
+
+
+    //   One Running command to start the application. => php artisan serve
+    // To Running JOB Update UpdateStatistics =>php artisan queue:work
+
+
     public function run(): void
     {
 
