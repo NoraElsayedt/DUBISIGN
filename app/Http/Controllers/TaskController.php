@@ -44,29 +44,7 @@ class TaskController extends Controller
                 'assigned_by_id' => $request->Assigned_BY,
     
             ]);
-        //     $taskCount = Task::where('assigned_to_id', $task->assigned_to_id)->where('assigned_by_id', $task->assigned_by_id)->count();
-
-            
-        //     $Statistic = Statistic::where('assigned_to_id', $task->assigned_to_id)->where('assigned_by_id', $task->assigned_by_id)->first();
-
-           
-
-        //     if(!$Statistic){
-
-            
-        //     Statistic::Create([
-        //         'number_of_task'=> $taskCount,
-        //         'assigned_to_id' => $task->assigned_to_id,
-        //         'assigned_by_id' => $task->assigned_by_id,
-        //         // 'task_id' => $task->id,
-        //     ]);
-        // }else{
-        //     $Statistic->update([
-        //         'number_of_task'=> $taskCount,
-        //         'assigned_to_id' => $task->assigned_to_id,
-        //         'assigned_by_id' => $task->assigned_by_id,
-        //     ]);
-        // }
+       
 
         // Dispatch the UpdateStatistics job
         UpdateStatistics::dispatch($task->assigned_to_id, $task->assigned_by_id);
@@ -103,28 +81,7 @@ class TaskController extends Controller
                 'assigned_by_id' => $request->Assigned_BY,
     
             ]);
-        //     $taskCount = Task::where('assigned_to_id', $task->assigned_to_id)->where('assigned_by_id', $task->assigned_by_id)->count();
-
-
-        //     $Statistic = Statistic::where('assigned_to_id', $task->assigned_to_id)->where('assigned_by_id', $task->assigned_by_id)->first();;
-
-        //     if(!$Statistic){
-
-            
-        //     Statistic::Create([
-        //         'number_of_task'=> $taskCount,
-        //         'assigned_to_id' => $task->assigned_to_id,
-        //         'assigned_by_id' => $task->assigned_by_id,
-        //         // 'task_id' => $task->id,
-        //     ]);
-        // }else{
-        //     $Statistic->update([
-        //         'number_of_task'=> $taskCount,
-        //         'assigned_to_id' => $task->assigned_to_id,
-        //         'assigned_by_id' => $task->assigned_by_id,
-        //     ]);
-        // }
-
+       
         // Dispatch the UpdateStatistics job
         UpdateStatistics::dispatch($task->assigned_to_id, $task->assigned_by_id);
 
