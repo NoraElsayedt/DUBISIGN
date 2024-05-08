@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class, //• Create seed for 10000 users
             AdminSeeder::class, //• Create seed for 100 admins.
+
+            Taskseeder::class ,
          
           
         ]);

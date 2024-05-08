@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Statistic;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class StatisticController extends Controller
@@ -10,7 +11,7 @@ class StatisticController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index() :View
     {
         $Statistic = Statistic::orderBy('number_of_task','desc')->get();
         return view('Statistic.index', compact('Statistic'));

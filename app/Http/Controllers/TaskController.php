@@ -9,13 +9,15 @@ use App\Models\Statistic;
 use Illuminate\Http\Request;
 use App\Jobs\UpdateStatistics;
 use App\Http\Requests\TaskRequest;
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 use SebastianBergmann\Type\Exception;
 
 class TaskController extends Controller
 {
 
-    public function index()
+    public function index() :View
     {
        $tasks = Task::all();
        $Assigned_To = Admin::all();
@@ -26,7 +28,7 @@ class TaskController extends Controller
   
 
    
-    public function store(TaskRequest $request)
+    public function store(TaskRequest $request) 
     {
      
        
