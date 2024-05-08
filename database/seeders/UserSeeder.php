@@ -28,6 +28,7 @@ class UserSeeder extends Seeder
     {
 
         DB::table('users')->delete();
+        
         User::factory()->count(1000)->create();
 
 
